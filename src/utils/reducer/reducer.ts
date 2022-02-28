@@ -1,5 +1,9 @@
 /* eslint-disable indent */
-import { IReducerState, TCategory } from '../../constants/initialState.types';
+import {
+  IReducerState,
+  TCategory,
+  TMeals,
+} from '../../constants/initialState.types';
 import { IAction } from './reducer.types';
 
 export const reducer = (
@@ -19,6 +23,14 @@ export const reducer = (
         ...state,
         isLoading: false,
         categories: action.payload as TCategory[],
+      };
+    }
+
+    case 'mealsFetched': {
+      return {
+        ...state,
+        isLoading: false,
+        meals: action.payload as TMeals[],
       };
     }
 
