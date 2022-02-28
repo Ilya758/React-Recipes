@@ -5,20 +5,26 @@ import { TAppContext } from '../../global/context/context.types';
 import { GridStyle } from '../Categories/Categories.style';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import Preloader from '../Preloader/Preloader';
+import { MainContainer } from './Home.style';
 
 const Home = () => {
   const {
-    state: { isMeal },
+    state: { isMeal, isLoading },
   } = useContext(AppContext) as TAppContext;
 
   return (
     <>
       <Header />
-      <main className="container">
-        <GridStyle isMeal={isMeal}>
-          <Outlet />
-        </GridStyle>
-      </main>
+      <MainContainer className="container">
+        {!isLoading ? (
+          <GridStyle isMeal={isMeal}>
+            <Outlet />
+          </GridStyle>
+        ) : (
+          <Preloader />
+        )}
+      </MainContainer>
       <Footer />
     </>
   );
