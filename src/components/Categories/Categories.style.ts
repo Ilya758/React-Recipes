@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
+import { IGridProps } from './Categories.types';
 
-export const GridStyle = styled.main`
+export const GridStyle = styled.main<IGridProps>`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: ${(props: IGridProps) =>
+    !props.isMeal ? 'repeat(3, 1fr)' : null};
   gap: 0 2.5rem;
   margin: 2rem 0 0;
 

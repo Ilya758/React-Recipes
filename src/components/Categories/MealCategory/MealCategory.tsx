@@ -3,7 +3,6 @@ import { AppContext } from '../../../global/context/context';
 import { TAppContext } from '../../../global/context/context.types';
 import { getMealCategory } from '../../../utils/api';
 import { useCurrentCategory } from '../../../utils/useCurrentCategory';
-import { GridStyle } from '../Categories.style';
 import MealCategoryItem from './MealCategoryItem/MealCategoryItem';
 import { IMealsProps } from './MealCategoryItem/MealCategoryItem.types';
 
@@ -25,13 +24,11 @@ const MealCategory = () => {
   }, []);
 
   return (
-    <div className="container">
-      <GridStyle className="grid">
-        {Object.values(meals).map(meal => {
-          return <MealCategoryItem key={meal.idMeal} {...meal} />;
-        })}
-      </GridStyle>
-    </div>
+    <>
+      {Object.values(meals).map(meal => (
+        <MealCategoryItem key={meal.idMeal} {...meal} />
+      ))}
+    </>
   );
 };
 
