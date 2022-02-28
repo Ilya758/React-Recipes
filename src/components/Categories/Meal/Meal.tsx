@@ -19,7 +19,6 @@ const Meal = () => {
   }, []);
 
   if (state.meal) {
-    console.log(state.meal);
     const { strMeal, strMealThumb, strCategory, strArea, strInstructions } =
       state.meal;
     return (

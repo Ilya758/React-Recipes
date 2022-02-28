@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
 import { IGridProps } from './Categories.types';
 
-export const GridStyle = styled.main<IGridProps>`
+export const GridStyle = styled.div<IGridProps>`
   display: grid;
   grid-template-columns: ${(props: IGridProps) =>
     !props.isMeal ? 'repeat(3, 1fr)' : null};

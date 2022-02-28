@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { NavWrapper } from './Header.style';
 
 const Header = () => {
@@ -5,9 +6,9 @@ const Header = () => {
     <header>
       <nav>
         <NavWrapper className="nav-wrapper red lighten-3">
-          <a href="#" className="brand-logo left">
+          <Link to="/" className="brand-logo left">
             React-Recipes
-          </a>
+          </Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
               <a
