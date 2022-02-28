@@ -18,6 +18,6 @@ const CATEGORIES = [
 ];
 
 export const MAPPED_CATEGORIES = CATEGORIES.reduce((acc: IEnumCats, c, ndx) => {
-  acc[ndx] = c;
+  acc[ndx + 1] = c;
   return acc;
 }, {});

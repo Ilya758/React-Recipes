@@ -2,6 +2,7 @@
 import {
   IReducerState,
   TCategory,
+  TMeal,
   TMeals,
 } from '../../constants/initialState.types';
 import { IAction } from './reducer.types';
@@ -23,6 +24,7 @@ export const reducer = (
         ...state,
         isLoading: false,
         categories: action.payload as TCategory[],
+        isMeal: false,
       };
     }
 
@@ -31,6 +33,7 @@ export const reducer = (
         ...state,
         isLoading: false,
         meals: action.payload as TMeals[],
+        isMeal: false,
       };
     }
 
@@ -38,7 +41,8 @@ export const reducer = (
       return {
         ...state,
         isLoading: false,
-        meal: action.payload as TMeals,
+        meal: action.payload as TMeal,
+        isMeal: true,
       };
     }
 

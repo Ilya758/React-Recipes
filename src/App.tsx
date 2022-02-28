@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Categories from './components/Categories/Categories';
+import Meal from './components/Categories/Meal/Meal';
 import Category from './components/Categories/MealCategory/MealCategory';
 import Home from './components/Home/Home';
 import { INITIAL_STATE } from './constants/initialState';
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/" element={<Home />}>
             <Route index element={<Categories categories={categories} />} />
             <Route path="category/:id" element={<Category />} />
+            <Route path="meals/:id" element={<Meal />} />
           </Route>
         </Routes>
       </AppContext.Provider>

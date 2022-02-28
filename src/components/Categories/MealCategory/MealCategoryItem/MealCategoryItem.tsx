@@ -11,8 +11,8 @@ const MealCategoryItem = ({ strMeal, idMeal, strMealThumb }: TMeals) => {
         <h5>{strMeal}</h5>
       </div>
       <div className="card-action">
-        <Link to={`/meal/${idMeal}`} className="btn red lighten-3">
-          Read about this recipe
+        <Link to={`/meals/${idMeal}`} className="btn red lighten-3">
+          Read about this
         </Link>
       </div>
     </div>
