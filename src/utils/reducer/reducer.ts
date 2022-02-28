@@ -24,7 +24,6 @@ export const reducer = (
         ...state,
         isLoading: false,
         categories: action.payload as TCategory[],
-        isMeal: false,
       };
     }
 
@@ -33,7 +32,6 @@ export const reducer = (
         ...state,
         isLoading: false,
         meals: action.payload as TMeals[],
-        isMeal: false,
       };
     }
 
@@ -42,6 +40,19 @@ export const reducer = (
         ...state,
         isLoading: false,
         meal: action.payload as TMeal,
+      };
+    }
+
+    case 'gridActive': {
+      return {
+        ...state,
+        isMeal: false,
+      };
+    }
+
+    case 'gridDisable': {
+      return {
+        ...state,
         isMeal: true,
       };
     }
