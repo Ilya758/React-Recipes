@@ -15,6 +15,8 @@ export const GridStyle = styled.main`
   & .card {
     transition: 0.15s linear !important;
     opacity: 0.9;
+    display: flex;
+    flex-direction: column;
 
     &:hover {
       opacity: 1;
@@ -25,5 +27,10 @@ export const GridStyle = styled.main`
 
   & .card-content {
     padding: 36px 24px 12px;
+    flex: 1 0 auto;
+  }
+
+  & .card-action {
+    text-align: center;
   }
 `;
