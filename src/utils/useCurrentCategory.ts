@@ -1,14 +1,9 @@
 /* eslint-disable quotes */
-import { useParams } from 'react-router-dom';
 import { MAPPED_CATEGORIES } from '../constants/categories/categories';
-import { IParams } from '../global/context/global.types';
+import { useCurrentParams } from './useCurrentParams';
 
 export const useCurrentCategory = () => {
-  const { id } = useParams<keyof IParams>();
-
-  if (!id) {
-    throw new Error("There's no id for this category");
-  }
+  const id = useCurrentParams();
 
   return MAPPED_CATEGORIES[id];
 };
