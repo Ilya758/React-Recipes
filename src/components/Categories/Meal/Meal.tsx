@@ -11,11 +11,15 @@ const Meal = () => {
   const { state, dispatch } = useContext(AppContext) as TAppContext;
 
   useEffect(() => {
-    getMealById<IMealsProps>(id)
-      .then(data => {
-        dispatch({ type: 'mealFetched', payload: data.meals[0] });
-      })
-      .catch(err => console.log(err));
+    if (!state.meal) {
+      getMealById<IMealsProps>(id)
+        .then(data => {
+          dispatch({ type: 'mealFetched', payload: data.meals[0] });
+        })
+        .catch(err => console.log(err));
+    }
+
+    dispatch({ type: 'gridDisable' });
   }, []);
 
   if (state.meal) {

@@ -14,13 +14,17 @@ const MealCategory = () => {
   } = useContext(AppContext) as TAppContext;
 
   useEffect(function getMeals() {
-    dispatch({ type: 'loading' });
+    if (!meals.length) {
+      dispatch({ type: 'loading' });
 
-    getMealCategory<IMealsProps>(category)
-      .then(data => {
-        dispatch({ type: 'mealsFetched', payload: data.meals });
-      })
-      .catch(err => console.log(err));
+      getMealCategory<IMealsProps>(category)
+        .then(data => {
+          dispatch({ type: 'mealsFetched', payload: data.meals });
+        })
+        .catch(err => console.log(err));
+    }
+
+    dispatch({ type: 'gridActive' });
   }, []);
 
   return (
