@@ -34,6 +34,14 @@ export const reducer = (
       };
     }
 
+    case 'mealFetched': {
+      return {
+        ...state,
+        isLoading: false,
+        meal: action.payload as TMeals,
+      };
+    }
+
     default: {
       return {
         ...state,
