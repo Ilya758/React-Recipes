@@ -1,7 +1,7 @@
 export interface IReducerState {
   isLoading: boolean;
   categories: TCategory[];
-  meals: TMeal[];
+  meals: TMeals[];
 }
 
 export type TCategories = Pick<IReducerState, 'categories'>;
@@ -16,10 +16,10 @@ export type TCategory = {
   [key in TCategoryKeys]: string;
 };
 
-type TMealKeys = 'strMeal' | 'strMealThumb' | 'idMeal';
+type TMealsKeys = 'strMeal' | 'strMealThumb' | 'idMeal';
 
-export type TMeal = {
-  [key in TMealKeys]: string;
+export type TMeals = {
+  [key in TMealsKeys]: string;
 };
 
-export type TUnionPayload = TCategory[] | TMeal[] | null;
+export type TUnionPayload = TCategory[] | TMeals[] | null;
