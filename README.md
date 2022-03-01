@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Using technologies
+- React
+- Styled Components
+- Typescript
+
+# Deploy 
+https://xenodochial-payne-390d80.netlify.app/
 
 ## Available Scripts
 
