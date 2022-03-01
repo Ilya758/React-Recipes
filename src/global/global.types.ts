@@ -3,6 +3,7 @@ export interface IParams {
 }
 
 export interface ILocation {
+  pathname: string;
   state: {
     category: null | string;
   };
