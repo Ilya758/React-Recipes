@@ -17,7 +17,11 @@ const CategoryItem = ({
         <p>{strCategoryDescription.slice(0, 70) + '...'}</p>
       </div>
       <div className="card-action">
-        <Link to={`category/${idCategory}`} className="btn red lighten-3">
+        <Link
+          to={`category/${+idCategory - 1}`}
+          className="btn red lighten-3"
+          state={{ category: null }}
+        >
           Watch category
         </Link>
       </div>
