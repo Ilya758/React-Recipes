@@ -5,11 +5,11 @@ import Categories from './components/Categories/Categories';
 import Meal from './components/Categories/Meal/Meal';
 import Category from './components/Categories/MealCategory/MealCategory';
 import Home from './components/Home/Home';
-import { INITIAL_STATE } from './constants/initialState';
-import { TCategories } from './constants/initialState.types';
+import { INITIAL_STATE } from './global/constants/initialState';
+import { TCategories } from './global/constants/initialState.types';
 import { AppContext } from './global/context/context';
-import { getAllCategories } from './utils/api';
-import { reducer } from './utils/reducer/reducer';
+import { getAllCategories } from './global/utils/api';
+import { reducer } from './global/utils/reducer/reducer';
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);

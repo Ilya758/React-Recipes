@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-import { CATEGORIES } from '../constants/categories/categories';
+import { CATEGORIES } from '../../constants/categories/categories';
 import { useCurrentParams } from './useCurrentParams';
 
 export const useCurrentCategory = () => {

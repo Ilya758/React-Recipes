@@ -1,8 +1,8 @@
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../../global/context/context';
 import { TAppContext } from '../../../global/context/context.types';
-import { getMealCategory } from '../../../utils/api';
-import { useCurrentCategory } from '../../../utils/useCurrentCategory';
+import { getMealCategory } from '../../../global/utils/api';
+import { useCurrentCategory } from '../../../global/utils/hooks/useCurrentCategory';
 import MealCategoryItem from './MealCategoryItem/MealCategoryItem';
 import { IMealsProps } from './MealCategoryItem/MealCategoryItem.types';
 

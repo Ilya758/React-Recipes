@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { TCategory } from '../../../constants/initialState.types';
+import { TCategory } from '../../../global/constants/initialState.types';
 
 const CategoryItem = ({
   idCategory,

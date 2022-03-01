@@ -1,4 +1,4 @@
-import { TCategory } from '../../constants/initialState.types';
+import { TCategory } from '../../global/constants/initialState.types';
 
 export interface ICategoriesProps {
   categories: TCategory[];

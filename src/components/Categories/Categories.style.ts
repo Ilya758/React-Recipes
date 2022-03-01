@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from '../../constants/colors';
+import { COLORS } from '../../global/constants/colors';
 import { IGridProps } from './Categories.types';
 
 export const GridStyle = styled.div<IGridProps>`

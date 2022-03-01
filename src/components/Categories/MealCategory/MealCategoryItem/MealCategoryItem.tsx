@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { TMeals } from '../../../../constants/initialState.types';
+import { TMeals } from '../../../../global/constants/initialState.types';
 
 const MealCategoryItem = ({ strMeal, idMeal, strMealThumb }: TMeals) => {
   return (

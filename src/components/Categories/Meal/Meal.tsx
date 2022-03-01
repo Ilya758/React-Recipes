@@ -2,8 +2,8 @@ import { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../../../global/context/context';
 import { TAppContext } from '../../../global/context/context.types';
-import { getMealById } from '../../../utils/api';
-import { useCurrentParams } from '../../../utils/useCurrentParams';
+import { getMealById } from '../../../global/utils/api';
+import { useCurrentParams } from '../../../global/utils/hooks/useCurrentParams';
 import { IMealsProps } from '../MealCategory/MealCategoryItem/MealCategoryItem.types';
 import { MealStyle } from './Meal.style';
 
