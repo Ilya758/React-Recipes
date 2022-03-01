@@ -32,6 +32,7 @@ export const reducer = (
         ...state,
         isLoading: false,
         meals: action.payload as TMeals[],
+        meal: null,
       };
     }
 

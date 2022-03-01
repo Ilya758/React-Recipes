@@ -1,9 +1,9 @@
 /* eslint-disable quotes */
-import { MAPPED_CATEGORIES } from '../constants/categories/categories';
+import { CATEGORIES } from '../constants/categories/categories';
 import { useCurrentParams } from './useCurrentParams';
 
 export const useCurrentCategory = () => {
-  const id = useCurrentParams();
+  const id = useCurrentParams() as string | number;
 
-  return MAPPED_CATEGORIES[id];
+  return CATEGORIES[id as keyof typeof CATEGORIES] as string | number;
 };
