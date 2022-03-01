@@ -19,7 +19,7 @@ const App = () => {
   useEffect(
     function activateGrid() {
       if (pathname === '/') {
-        dispatch({ type: 'gridActive' });
+        dispatch({ type: 'reset' });
       }
     },
     [pathname]

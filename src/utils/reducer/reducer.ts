@@ -1,9 +1,9 @@
 /* eslint-disable indent */
 import {
+  IMealPayload,
   IReducerState,
   TCategory,
   TMeal,
-  TMeals,
 } from '../../constants/initialState.types';
 import { IAction } from './reducer.types';
 
@@ -24,15 +24,19 @@ export const reducer = (
         ...state,
         isLoading: false,
         categories: action.payload as TCategory[],
+        currentCategory: '',
       };
     }
 
     case 'mealsFetched': {
+      const payload = action.payload as IMealPayload;
+
       return {
         ...state,
         isLoading: false,
-        meals: action.payload as TMeals[],
+        meals: payload.meals,
         meal: null,
+        currentCategory: payload.category,
       };
     }
 
@@ -55,6 +59,14 @@ export const reducer = (
       return {
         ...state,
         isMeal: true,
+      };
+    }
+
+    case 'reset': {
+      return {
+        ...state,
+        currentCategory: '',
+        isMeal: false,
       };
     }
 

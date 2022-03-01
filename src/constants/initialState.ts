@@ -6,4 +6,5 @@ export const INITIAL_STATE: IReducerState = {
   meals: [],
   meal: null,
   isMeal: false,
+  currentCategory: '',
 };
