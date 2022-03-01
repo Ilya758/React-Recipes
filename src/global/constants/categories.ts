@@ -1,0 +1,16 @@
+export enum CATEGORIES {
+  'Beef' = 0,
+  'Chicken' = 1,
+  'Dessert' = 2,
+  'Lamb' = 3,
+  'Miscellaneous' = 4,
+  'Pasta' = 5,
+  'Pork' = 6,
+  'Seafood' = 7,
+  'Side' = 8,
+  'Starter' = 9,
+  'Vegan' = 10,
+  'Vegetarian' = 11,
+  'Breakfast' = 12,
+  'Goat' = 13,
+}
